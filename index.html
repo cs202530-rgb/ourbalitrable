@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -20,7 +21,7 @@
                 display: none !important;
             }
             body {
-                background-color: #white !important;
+                background-color: white !important;
             }
             main {
                 max-width: 100% !important;
@@ -62,7 +63,7 @@
                 </div>
             </div>
             
-            <div class="flex items-center gap-2 self-stretch sm:self-auto">
+            <div class="flex flex-wrap items-center gap-2 self-stretch sm:self-auto">
                 <button onclick="window.print()" class="w-full sm:w-auto flex items-center justify-center gap-1.5 text-xs px-4 py-2.5 rounded-xl font-bold bg-teal-600 hover:bg-teal-700 text-white shadow-sm transition-all">
                     <i data-lucide="printer" class="w-4 h-4"></i>
                     인쇄 및 PDF 저장
@@ -188,7 +189,6 @@
                 <span class="text-xs text-slate-400">일정표에서 '지도 위치'를 누르면 지도가 해당 지역으로 줌인 확대됩니다!</span>
             </div>
             <div class="bg-white rounded-3xl p-4 shadow-sm border border-slate-100 overflow-hidden">
-                <!-- 지도의 기본 세로 높이를 h-96에서 h-[500px] 및 lg:h-[550px]로 대폭 확대 -->
                 <div id="map" class="w-full h-[500px] lg:h-[550px] rounded-2xl z-10"></div>
                 <div class="mt-4 flex flex-wrap gap-3 justify-center text-xs text-slate-500 font-bold">
                     <button onclick="zoomToSpot('airport')" class="flex items-center gap-1 bg-slate-100 hover:bg-teal-50 hover:text-teal-700 px-2.5 py-1.5 rounded-lg transition-colors"><span class="w-2.5 h-2.5 rounded-full bg-teal-600 inline-block"></span> 덴파사르 공항</button>
@@ -258,19 +258,12 @@
             const localSchedules = localStorage.getItem('bali_local_schedules');
             const localChecklists = localStorage.getItem('bali_local_checklists');
 
-            if (localSchedules) {
-                schedules = JSON.parse(localSchedules);
-            } else {
-                schedules = [...defaultSchedules];
-                saveSchedules();
-            }
-
-            if (localChecklists) {
-                checklists = JSON.parse(localChecklists);
-            } else {
-                checklists = [...defaultChecklists];
-                saveChecklists();
-            }
+            schedules = localSchedules ? JSON.parse(localSchedules) : [...defaultSchedules];
+            checklists = localChecklists ? JSON.parse(localChecklists) : [...defaultChecklists];
+            
+            // 최초 실행 시 로컬 스토리지 데이터 동기화 보장
+            if (!localSchedules) saveSchedules();
+            if (!localChecklists) saveChecklists();
         }
 
         // --- Save Data ---
@@ -290,7 +283,10 @@
         }
 
         function getRelativeDay(dateString) {
-            if (dateString < '2026-07-25') return '';
+            const isBeforeStart = dateString.localeCompare('2026-07-25') === -1;
+            if (isBeforeStart) {
+                return '';
+            }
             const start = new Date('2026-07-25');
             const current = new Date(dateString);
             const diffTime = Math.abs(current - start);
@@ -311,18 +307,28 @@
         // 특정 핵심 단어가 일정에 들어갈 때 지도 매핑 키 반환
         function getMapLocationKey(content) {
             const normalized = content.toLowerCase();
-            if (normalized.includes('공항') || normalized.includes('덴파사르')) return 'airport';
-            if (normalized.includes('스미냑') || normalized.includes('포테이토') || normalized.includes('더블식스')) return 'seminyak';
-            if (normalized.includes('워터봄') || normalized.includes('꾸따')) return 'kuta';
-            if (normalized.includes('우붓') || normalized.includes('누사테라피') || normalized.includes('몽키')) return 'ubud';
-            if (normalized.includes('바투르') || normalized.includes('바투루') || normalized.includes('지프')) return 'batur';
+            if (normalized.includes('공항')) { return 'airport'; }
+            if (normalized.includes('덴파사르')) { return 'airport'; }
+            if (normalized.includes('스미냑')) { return 'seminyak'; }
+            if (normalized.includes('포테이토')) { return 'seminyak'; }
+            if (normalized.includes('더블식스')) { return 'seminyak'; }
+            if (normalized.includes('워터봄')) { return 'kuta'; }
+            if (normalized.includes('꾸따')) { return 'kuta'; }
+            if (normalized.includes('우붓')) { return 'ubud'; }
+            if (normalized.includes('누사테라피')) { return 'ubud'; }
+            if (normalized.includes('몽키')) { return 'ubud'; }
+            if (normalized.includes('바투르')) { return 'batur'; }
+            if (normalized.includes('바투루')) { return 'batur'; }
+            if (normalized.includes('지프')) { return 'batur'; }
             return null;
         }
 
         // --- Render UI Modules ---
         function renderSchedules() {
             schedules.sort((a, b) => {
-                if (a.date !== b.date) return a.date.localeCompare(b.date);
+                if (a.date !== b.date) {
+                    return a.date.localeCompare(b.date);
+                }
                 const timeA = a.time || '23:59';
                 const timeB = b.time || '23:59';
                 return timeA.localeCompare(timeB);
@@ -335,11 +341,14 @@
 
             const groups = {};
             schedules.forEach(item => {
-                if(!groups[item.date]) groups[item.date] = [];
+                if(!groups[item.date]) {
+                    groups[item.date] = [];
+                }
                 groups[item.date].push(item);
             });
 
-            if (schedules.length === 0) {
+            const keys = Object.keys(groups);
+            if (keys.length === 0) {
                 container.innerHTML = `
                     <div class="text-center py-12 bg-white rounded-2xl border border-slate-100">
                         <p class="text-slate-400 text-sm">등록된 일정이 없습니다. 일정을 작성해 보세요!</p>
@@ -348,7 +357,7 @@
                 return;
             }
 
-            Object.keys(groups).forEach(date => {
+            keys.forEach(date => {
                 const dateGroup = document.createElement('div');
                 dateGroup.className = 'relative';
 
@@ -426,7 +435,9 @@
                 btn.onclick = () => {
                     const id = btn.getAttribute('data-id');
                     const item = schedules.find(s => s.id === id);
-                    if(item) openScheduleForm(item);
+                    if(item) {
+                        openScheduleForm(item);
+                    }
                 };
             });
 
@@ -444,7 +455,9 @@
 
         function renderChecklist() {
             checklists.sort((a, b) => {
-                if (a.isDone === b.isDone) return 0;
+                if (a.isDone === b.isDone) {
+                    return 0;
+                }
                 return a.isDone ? 1 : -1;
             });
 
@@ -454,7 +467,10 @@
             container.innerHTML = '';
 
             const completedCount = checklists.filter(c => c.isDone).length;
-            const progress = checklists.length === 0 ? 0 : Math.round((completedCount / checklists.length) * 100);
+            let progress = 0;
+            if (checklists.length !== 0) {
+                progress = Math.round((completedCount / checklists.length) * 100);
+            }
 
             document.getElementById('progress-text').innerText = `${completedCount} / ${checklists.length}개 (${progress}%)`;
             document.getElementById('progress-bar').style.width = `${progress}%`;
@@ -476,7 +492,7 @@
                 const contentClass = item.isDone ? 'text-slate-400 line-through font-normal' : 'text-slate-700 font-semibold';
 
                 itemDiv.innerHTML = `
-                    <button class="w-6 h-6 rounded-lg border-2 flex items-center justify-center shrink-0 transition-all toggle-checklist-btn ${checkBtnClass}" data-id="${item.id}">
+                    <button class="no-print w-6 h-6 rounded-lg border-2 flex items-center justify-center shrink-0 transition-all toggle-checklist-btn ${item.id}" data-id="${item.id}">
                         <i data-lucide="check" class="w-3.5 h-3.5 stroke-[3.5]"></i>
                     </button>
                     <span class="flex-1 text-sm transition-all break-keep ${contentClass}">${item.content}</span>
@@ -545,6 +561,7 @@
             document.getElementById('add-schedule-btn').classList.remove('hidden');
         }
 
+        // 카테고리 스타일 선택 적용
         function selectType(type) {
             currentSelectedType = type;
             const buttons = document.querySelectorAll('#type-selector button');
@@ -559,7 +576,6 @@
         }
 
         // --- 🗺️ Map Logic (Leaflet.js) ---
-        // Coordinates for default Bali spots
         const defaultCoordinates = {
             'airport': [-8.7481, 115.1672, '덴파사르 공항 ✈️'],
             'seminyak': [-8.6913, 115.1682, '스미냑 숙소/비치클럽 🏖️'],
@@ -569,7 +585,6 @@
         };
 
         function initMap() {
-            // Bali central coordinate center
             map = L.map('map', { scrollWheelZoom: false }).setView([-8.55, 115.22], 10);
             
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -582,7 +597,6 @@
         function updateMapMarkers() {
             if (!map) return;
             
-            // Clear existing markers if any
             map.eachLayer((layer) => {
                 if (layer instanceof L.Marker) {
                     map.removeLayer(layer);
@@ -592,11 +606,9 @@
             markersGroup = {};
             const markers = [];
 
-            // Add default highlights
             Object.keys(defaultCoordinates).forEach(key => {
                 const spot = defaultCoordinates[key];
                 
-                // Custom label icon styling
                 const labelIcon = L.divIcon({
                     className: 'custom-pin',
                     html: `📍 ${spot[2]}`,
@@ -611,36 +623,33 @@
                 markers.push(marker);
             });
 
-            // Adjust bounds to show all markers beautifully initially
-            if (markers.length > 0) {
+            const len = markers.length;
+            if (len !== 0) {
                 const group = new L.featureGroup(markers);
                 map.fitBounds(group.getBounds().pad(0.12));
             }
         }
 
-        // 특정 위치로 화면을 크게 확대하여 줌인(FlyTo)하는 인터랙티브 가이드 함수
         window.zoomToSpot = function(key) {
             const spot = defaultCoordinates[key];
-            if (spot && map) {
-                // Leaflet flyTo를 사용해 줌 레벨 14(고배율 상세 확대)로 이동 및 팝업 표시
-                map.flyTo([spot[0], spot[1]], 14, {
-                    animate: true,
-                    duration: 1.5 // 1.5초 동안 부드럽게 이동
-                });
-                
-                // 이동 후 팝업 열어주기
-                setTimeout(() => {
-                    if (markersGroup[key]) {
-                        markersGroup[key].openPopup();
-                    }
-                }, 1500);
+            if (spot) {
+                if (map) {
+                    map.flyTo([spot[0], spot[1]], 14, {
+                        animate: true,
+                        duration: 1.5
+                    });
+                    
+                    setTimeout(() => {
+                        if (markersGroup[key]) {
+                            markersGroup[key].openPopup();
+                        }
+                    }, 1500);
 
-                // 지도 섹션으로 스크롤 부드럽게 이동 (no-print 제외)
-                document.getElementById('map').scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    document.getElementById('map').scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
             }
         };
 
-        // --- Event Handlers ---
         document.getElementById('schedule-form').onsubmit = (e) => {
             e.preventDefault();
             const id = document.getElementById('form-schedule-id').value;
@@ -664,14 +673,18 @@
         };
 
         document.querySelectorAll('#type-selector button').forEach(btn => {
-            btn.onclick = () => selectType(btn.getAttribute('data-type'));
+            btn.onclick = () => {
+                selectType(btn.getAttribute('data-type'));
+            };
         });
 
         document.getElementById('checklist-form').onsubmit = (e) => {
             e.preventDefault();
             const input = document.getElementById('checklist-new-input');
             const content = input.value.trim();
-            if(!content) return;
+            if(!content) {
+                return;
+            }
 
             const newId = 'c_' + Date.now();
             checklists.push({ id: newId, content, isDone: false });
@@ -681,9 +694,15 @@
         };
 
         // Form Visibility Toggles
-        document.getElementById('add-schedule-btn').onclick = () => openScheduleForm();
-        document.getElementById('close-form-btn').onclick = () => closeScheduleForm();
-        document.getElementById('cancel-form-btn').onclick = () => closeScheduleForm();
+        document.getElementById('add-schedule-btn').onclick = () => {
+            openScheduleForm();
+        };
+        document.getElementById('close-form-btn').onclick = () => {
+            closeScheduleForm();
+        };
+        document.getElementById('cancel-form-btn').onclick = () => {
+            closeScheduleForm();
+        };
 
         // Mobile Tabs Toggle
         const tabSchedule = document.getElementById('tab-schedule-btn');
