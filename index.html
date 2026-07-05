@@ -1,16 +1,15 @@
 
 <!DOCTYPE html>
-<html lang="ko">
-<head>
+<html lang="ko"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🌴 발리 여행 일정표 & 체크리스트</title>
+    <title>🌴 발리 여행 일정표 &amp; 체크리스트</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <!-- Leaflet.js CSS for Map -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;900&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
         body {
@@ -45,7 +44,7 @@
             transform: translate(-50%, -50%);
         }
     </style>
-</head>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0px}.bottom-2{bottom:0.5rem}.right-2{right:0.5rem}.top-0{top:0px}.top-2{top:0.5rem}.bottom-0{bottom:0px}.right-3{right:0.75rem}.top-3{top:0.75rem}.top-\[138px\]{top:138px}.z-10{z-index:10}.z-40{z-index:40}.z-50{z-index:50}.-z-0{z-index:0}.z-20{z-index:20}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:0.25rem}.mb-1\.5{margin-bottom:0.375rem}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mb-5{margin-bottom:1.25rem}.mt-1\.5{margin-top:0.375rem}.mt-4{margin-top:1rem}.mt-8{margin-top:2rem}.ml-1\.5{margin-left:0.375rem}.mt-1{margin-top:0.25rem}.mt-2{margin-top:0.5rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.aspect-square{aspect-ratio:1 / 1}.h-2\.5{height:0.625rem}.h-3{height:0.75rem}.h-4{height:1rem}.h-5{height:1.25rem}.h-6{height:1.5rem}.h-\[500px\]{height:500px}.h-full{height:100%}.h-3\.5{height:0.875rem}.max-h-\[85vh\]{max-height:85vh}.min-h-screen{min-height:100vh}.min-h-\[150px\]{min-height:150px}.w-2\.5{width:0.625rem}.w-4{width:1rem}.w-5{width:1.25rem}.w-6{width:1.5rem}.w-full{width:100%}.w-0\.5{width:0.125rem}.w-14{width:3.5rem}.w-3{width:0.75rem}.w-3\.5{width:0.875rem}.max-w-7xl{max-width:80rem}.max-w-lg{max-width:32rem}.max-w-sm{max-width:24rem}.flex-1{flex:1 1 0%}.shrink-0{flex-shrink:0}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.items-baseline{align-items:baseline}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:0.25rem}.gap-1\.5{gap:0.375rem}.gap-2{gap:0.5rem}.gap-2\.5{gap:0.625rem}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.gap-8{gap:2rem}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.divide-y > :not([hidden]) ~ :not([hidden]){--tw-divide-y-reverse:0;border-top-width:calc(1px * calc(1 - var(--tw-divide-y-reverse)));border-bottom-width:calc(1px * var(--tw-divide-y-reverse))}.divide-slate-50 > :not([hidden]) ~ :not([hidden]){--tw-divide-opacity:1;border-color:rgb(248 250 252 / var(--tw-divide-opacity, 1))}.divide-slate-100 > :not([hidden]) ~ :not([hidden]){--tw-divide-opacity:1;border-color:rgb(241 245 249 / var(--tw-divide-opacity, 1))}.self-stretch{align-self:stretch}.overflow-hidden{overflow:hidden}.break-keep{word-break:keep-all}.rounded{border-radius:0.25rem}.rounded-2xl{border-radius:1rem}.rounded-3xl{border-radius:1.5rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.rounded-md{border-radius:0.375rem}.border{border-width:1px}.border-2{border-width:2px}.border-b{border-bottom-width:1px}.border-b-2{border-bottom-width:2px}.border-t{border-top-width:1px}.border-dashed{border-style:dashed}.border-slate-100{--tw-border-opacity:1;border-color:rgb(241 245 249 / var(--tw-border-opacity, 1))}.border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240 / var(--tw-border-opacity, 1))}.border-slate-50{--tw-border-opacity:1;border-color:rgb(248 250 252 / var(--tw-border-opacity, 1))}.border-teal-100{--tw-border-opacity:1;border-color:rgb(204 251 241 / var(--tw-border-opacity, 1))}.border-teal-200{--tw-border-opacity:1;border-color:rgb(153 246 228 / var(--tw-border-opacity, 1))}.border-teal-300{--tw-border-opacity:1;border-color:rgb(94 234 212 / var(--tw-border-opacity, 1))}.border-teal-500{--tw-border-opacity:1;border-color:rgb(20 184 166 / var(--tw-border-opacity, 1))}.border-teal-600{--tw-border-opacity:1;border-color:rgb(13 148 136 / var(--tw-border-opacity, 1))}.border-indigo-100{--tw-border-opacity:1;border-color:rgb(224 231 255 / var(--tw-border-opacity, 1))}.border-orange-100{--tw-border-opacity:1;border-color:rgb(255 237 213 / var(--tw-border-opacity, 1))}.border-sky-100{--tw-border-opacity:1;border-color:rgb(224 242 254 / var(--tw-border-opacity, 1))}.border-slate-200\/50{border-color:rgb(226 232 240 / 0.5)}.border-rose-100{--tw-border-opacity:1;border-color:rgb(255 228 230 / var(--tw-border-opacity, 1))}.bg-slate-50{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.bg-amber-500{--tw-bg-opacity:1;background-color:rgb(245 158 11 / var(--tw-bg-opacity, 1))}.bg-emerald-50{--tw-bg-opacity:1;background-color:rgb(236 253 245 / var(--tw-bg-opacity, 1))}.bg-slate-100{--tw-bg-opacity:1;background-color:rgb(241 245 249 / var(--tw-bg-opacity, 1))}.bg-slate-900\/60{background-color:rgb(15 23 42 / 0.6)}.bg-teal-50{--tw-bg-opacity:1;background-color:rgb(240 253 250 / var(--tw-bg-opacity, 1))}.bg-teal-50\/20{background-color:rgb(240 253 250 / 0.2)}.bg-teal-500{--tw-bg-opacity:1;background-color:rgb(20 184 166 / var(--tw-bg-opacity, 1))}.bg-teal-600{--tw-bg-opacity:1;background-color:rgb(13 148 136 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-indigo-50{--tw-bg-opacity:1;background-color:rgb(238 242 255 / var(--tw-bg-opacity, 1))}.bg-indigo-500{--tw-bg-opacity:1;background-color:rgb(99 102 241 / var(--tw-bg-opacity, 1))}.bg-orange-50{--tw-bg-opacity:1;background-color:rgb(255 247 237 / var(--tw-bg-opacity, 1))}.bg-orange-500{--tw-bg-opacity:1;background-color:rgb(249 115 22 / var(--tw-bg-opacity, 1))}.bg-sky-50{--tw-bg-opacity:1;background-color:rgb(240 249 255 / var(--tw-bg-opacity, 1))}.bg-sky-500{--tw-bg-opacity:1;background-color:rgb(14 165 233 / var(--tw-bg-opacity, 1))}.bg-slate-50\/95{background-color:rgb(248 250 252 / 0.95)}.bg-rose-50{--tw-bg-opacity:1;background-color:rgb(255 241 242 / var(--tw-bg-opacity, 1))}.bg-rose-500{--tw-bg-opacity:1;background-color:rgb(244 63 94 / var(--tw-bg-opacity, 1))}.stroke-\[3\.5\]{stroke-width:3.5}.p-3{padding:0.75rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.p-1{padding:0.25rem}.p-1\.5{padding:0.375rem}.p-3\.5{padding:0.875rem}.px-1{padding-left:0.25rem;padding-right:0.25rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-2\.5{padding-left:0.625rem;padding-right:0.625rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-3\.5{padding-top:0.875rem;padding-bottom:0.875rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-6{padding-top:1.5rem;padding-bottom:1.5rem}.px-1\.5{padding-left:0.375rem;padding-right:0.375rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.pb-16{padding-bottom:4rem}.pb-2{padding-bottom:0.5rem}.pl-4{padding-left:1rem}.pr-12{padding-right:3rem}.pt-2{padding-top:0.5rem}.pb-1{padding-bottom:0.25rem}.pr-24{padding-right:6rem}.pt-0\.5{padding-top:0.125rem}.text-right{text-align:right}.font-mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}.text-2xl{font-size:1.5rem;line-height:2rem}.text-\[10px\]{font-size:10px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-black{font-weight:900}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-semibold{font-weight:600}.font-normal{font-weight:400}.leading-relaxed{line-height:1.625}.tracking-tight{letter-spacing:-0.025em}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59 / var(--tw-text-opacity, 1))}.text-amber-500{--tw-text-opacity:1;color:rgb(245 158 11 / var(--tw-text-opacity, 1))}.text-emerald-600{--tw-text-opacity:1;color:rgb(5 150 105 / var(--tw-text-opacity, 1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105 / var(--tw-text-opacity, 1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}.text-teal-600{--tw-text-opacity:1;color:rgb(13 148 136 / var(--tw-text-opacity, 1))}.text-teal-700{--tw-text-opacity:1;color:rgb(15 118 110 / var(--tw-text-opacity, 1))}.text-teal-800{--tw-text-opacity:1;color:rgb(17 94 89 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-indigo-600{--tw-text-opacity:1;color:rgb(79 70 229 / var(--tw-text-opacity, 1))}.text-orange-600{--tw-text-opacity:1;color:rgb(234 88 12 / var(--tw-text-opacity, 1))}.text-sky-600{--tw-text-opacity:1;color:rgb(2 132 199 / var(--tw-text-opacity, 1))}.text-rose-600{--tw-text-opacity:1;color:rgb(225 29 72 / var(--tw-text-opacity, 1))}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.ring-4{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.ring-white{--tw-ring-opacity:1;--tw-ring-color:rgb(255 255 255 / var(--tw-ring-opacity, 1))}.backdrop-blur-sm{--tw-backdrop-blur:blur(4px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.backdrop-blur-md{--tw-backdrop-blur:blur(12px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-opacity{transition-property:opacity;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-200{transition-duration:200ms}.duration-500{transition-duration:500ms}.ease-out{transition-timing-function:cubic-bezier(0, 0, 0.2, 1)}.hover\:border-teal-400:hover{--tw-border-opacity:1;border-color:rgb(45 212 191 / var(--tw-border-opacity, 1))}.hover\:bg-amber-600:hover{--tw-bg-opacity:1;background-color:rgb(217 119 6 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-200:hover{--tw-bg-opacity:1;background-color:rgb(226 232 240 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-50:hover{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.hover\:bg-teal-100:hover{--tw-bg-opacity:1;background-color:rgb(204 251 241 / var(--tw-bg-opacity, 1))}.hover\:bg-teal-50:hover{--tw-bg-opacity:1;background-color:rgb(240 253 250 / var(--tw-bg-opacity, 1))}.hover\:bg-teal-700:hover{--tw-bg-opacity:1;background-color:rgb(15 118 110 / var(--tw-bg-opacity, 1))}.hover\:bg-rose-50:hover{--tw-bg-opacity:1;background-color:rgb(255 241 242 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-50\/50:hover{background-color:rgb(248 250 252 / 0.5)}.hover\:bg-slate-50\/70:hover{background-color:rgb(248 250 252 / 0.7)}.hover\:text-slate-600:hover{--tw-text-opacity:1;color:rgb(71 85 105 / var(--tw-text-opacity, 1))}.hover\:text-teal-700:hover{--tw-text-opacity:1;color:rgb(15 118 110 / var(--tw-text-opacity, 1))}.hover\:text-rose-500:hover{--tw-text-opacity:1;color:rgb(244 63 94 / var(--tw-text-opacity, 1))}.hover\:text-rose-600:hover{--tw-text-opacity:1;color:rgb(225 29 72 / var(--tw-text-opacity, 1))}.hover\:text-teal-600:hover{--tw-text-opacity:1;color:rgb(13 148 136 / var(--tw-text-opacity, 1))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus\:ring-teal-500:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(20 184 166 / var(--tw-ring-opacity, 1))}@media (min-width: 640px){.sm\:flex-none{flex:none}.sm\:flex-row{flex-direction:row}.sm\:items-center{align-items:center}.sm\:justify-between{justify-content:space-between}.sm\:self-auto{align-self:auto}.sm\:border-0{border-width:0px}.sm\:bg-transparent{background-color:transparent}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}}@media (min-width: 1024px){.lg\:top-\[85px\]{top:85px}.lg\:col-span-5{grid-column:span 5 / span 5}.lg\:col-span-7{grid-column:span 7 / span 7}.lg\:block{display:block}.lg\:hidden{display:none}.lg\:h-\[550px\]{height:550px}.lg\:grid-cols-12{grid-template-columns:repeat(12, minmax(0, 1fr))}.lg\:pb-8{padding-bottom:2rem}.lg\:opacity-0{opacity:0}.group:hover .lg\:group-hover\:opacity-100{opacity:1}}</style></head>
 <body class="bg-slate-50 text-slate-800 pb-16 lg:pb-8 min-h-screen">
 
     <!-- Top Navigation Bar -->
@@ -63,9 +62,18 @@
                 </div>
             </div>
             
-            <div class="flex flex-wrap items-center gap-2 self-stretch sm:self-auto">
-                <button onclick="window.print()" class="w-full sm:w-auto flex items-center justify-center gap-1.5 text-xs px-4 py-2.5 rounded-xl font-bold bg-teal-600 hover:bg-teal-700 text-white shadow-sm transition-all">
-                    <i data-lucide="printer" class="w-4 h-4"></i>
+            <div class="flex flex-wrap items-center gap-3 self-stretch sm:self-auto">
+                <!-- 🔄 기본 일정 원클릭 복구 버튼 -->
+                <button id="restore-default-btn" class="flex-1 sm:flex-none flex items-center justify-center gap-1.5 text-xs px-3 py-2.5 rounded-xl font-bold bg-teal-50 hover:bg-teal-100 text-teal-700 transition-all border border-teal-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="refresh-cw" aria-hidden="true" class="lucide lucide-refresh-cw w-4 h-4"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"></path><path d="M21 3v5h-5"></path><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"></path><path d="M8 16H3v5"></path></svg>
+                    기본 일정 복구 🔄
+                </button>
+                <button id="download-html-btn" class="flex-1 sm:flex-none flex items-center justify-center gap-1.5 text-xs px-4 py-2.5 rounded-xl font-bold bg-amber-500 hover:bg-amber-600 text-white shadow-sm transition-all">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="download" aria-hidden="true" class="lucide lucide-download w-4 h-4"><path d="M12 15V3"></path><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="m7 10 5 5 5-5"></path></svg>
+                    수정된 HTML 파일 내려받기 📥
+                </button>
+                <button onclick="window.print()" class="flex-1 sm:flex-none flex items-center justify-center gap-1.5 text-xs px-4 py-2.5 rounded-xl font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all border border-slate-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="printer" aria-hidden="true" class="lucide lucide-printer w-4 h-4"><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><path d="M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6"></path><rect x="6" y="14" width="12" height="8" rx="1"></rect></svg>
                     인쇄 및 PDF 저장
                 </button>
             </div>
@@ -74,10 +82,10 @@
         <!-- Mobile Navigation Tabs -->
         <div class="flex border-t border-slate-100 lg:hidden">
             <button id="tab-schedule-btn" class="flex-1 py-3.5 text-sm font-bold flex justify-center items-center gap-2 border-b-2 border-teal-600 text-teal-700 bg-teal-50/20">
-                <i data-lucide="calendar" class="w-4.5 h-4.5"></i> 일정표 (<span id="mobile-schedule-count">0</span>)
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="calendar" aria-hidden="true" class="lucide lucide-calendar w-4.5 h-4.5"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg> 일정표 (<span id="mobile-schedule-count">25</span>)
             </button>
             <button id="tab-checklist-btn" class="flex-1 py-3.5 text-sm font-bold flex justify-center items-center gap-2 text-slate-500 bg-white">
-                <i data-lucide="check-square" class="w-4.5 h-4.5"></i> 체크리스트 (<span id="mobile-checklist-count">0</span>)
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check-square" aria-hidden="true" class="lucide lucide-check-square w-4.5 h-4.5"><path d="M21 10.656V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h12.344"></path><path d="m9 11 3 3L22 4"></path></svg> 체크리스트 (<span id="mobile-checklist-count">3</span>)
             </button>
         </div>
     </header>
@@ -90,31 +98,29 @@
             <section id="schedule-section" class="lg:col-span-7 space-y-6">
                 <div class="flex items-center justify-between pb-2 border-b border-slate-200">
                     <h2 class="text-lg font-bold text-slate-800 flex items-center gap-2">
-                        <i data-lucide="compass" class="text-teal-600"></i> 발리 여행 일정표
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="compass" aria-hidden="true" class="lucide lucide-compass text-teal-600"><circle cx="12" cy="12" r="10"></circle><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"></path></svg> 발리 여행 일정표
                     </h2>
                     <span class="text-xs text-slate-400 no-print">일정을 자유롭게 관리해 보세요</span>
                 </div>
 
-                <div id="schedule-container" class="space-y-6">
-                    <!-- Dynamic Date groups will go here -->
-                </div>
+                <div id="schedule-container" class="space-y-6"></div>
 
                 <button id="add-schedule-btn" class="w-full py-4 border-2 border-dashed border-teal-300 text-teal-600 font-bold rounded-2xl hover:bg-teal-50 hover:border-teal-400 transition-all flex items-center justify-center gap-2 shadow-sm no-print">
-                    <i data-lucide="plus" class="w-5 h-5"></i> 새 일정 추가하기
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="plus" aria-hidden="true" class="lucide lucide-plus w-5 h-5"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg> 새 일정 추가하기
                 </button>
 
                 <!-- Add/Edit Schedule Form (Hidden initially) -->
-                <form id="schedule-form" class="hidden bg-white p-5 rounded-2xl shadow-md border border-teal-100 space-y-4 animate-in zoom-in-95 duration-200 no-print">
-                    <input type="hidden" id="form-schedule-id">
+                <form id="schedule-form" class="bg-white p-5 rounded-2xl shadow-md border border-teal-100 space-y-4 animate-in zoom-in-95 duration-200 no-print hidden">
+                    <input type="hidden" id="form-schedule-id" value="s_1783230188215">
                     <div class="flex justify-between items-center pb-2 border-b border-slate-100">
-                        <h4 id="form-title" class="font-bold text-slate-800 text-sm">➕ 새 일정 추가</h4>
-                        <button type="button" id="close-form-btn" class="text-slate-400 hover:text-slate-600"><i data-lucide="x" class="w-5 h-5"></i></button>
+                        <h4 id="form-title" class="font-bold text-slate-800 text-sm">📝 일정 편집하기</h4>
+                        <button type="button" id="close-form-btn" class="text-slate-400 hover:text-slate-600"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="x" aria-hidden="true" class="lucide lucide-x w-5 h-5"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button>
                     </div>
 
                     <div class="grid grid-cols-2 gap-3">
                         <div>
                             <label class="block text-xs font-bold text-slate-500 mb-1">날짜</label>
-                            <input type="date" id="form-date" value="2026-07-25" class="w-full bg-slate-50 border-2 border-slate-100 rounded-xl px-3 py-2 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-teal-500" required>
+                            <input type="date" id="form-date" value="2026-07-25" class="w-full bg-slate-50 border-2 border-slate-100 rounded-xl px-3 py-2 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-teal-500" required="">
                         </div>
                         <div>
                             <label class="block text-xs font-bold text-slate-500 mb-1">시간 (선택)</label>
@@ -124,16 +130,16 @@
 
                     <div>
                         <label class="block text-xs font-bold text-slate-500 mb-1">일정 내용</label>
-                        <input type="text" id="form-content" placeholder="예: 우붓 야시장 가기 🍢" class="w-full bg-slate-50 border-2 border-slate-100 rounded-xl px-3 py-2 text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-teal-500" required>
+                        <input type="text" id="form-content" placeholder="예: 우붓 야시장 가기 🍢" class="w-full bg-slate-50 border-2 border-slate-100 rounded-xl px-3 py-2 text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-teal-500" required="">
                     </div>
 
                     <div>
                         <label class="block text-xs font-bold text-slate-500 mb-1.5">구분</label>
                         <div class="grid grid-cols-4 gap-2" id="type-selector">
-                            <button type="button" data-type="flight" class="py-2 text-xs rounded-xl border-2 font-bold transition-all bg-white border-slate-100 text-slate-500 hover:bg-slate-50">✈️ 항공</button>
+                            <button type="button" data-type="flight" class="py-2 text-xs rounded-xl border-2 font-bold transition-all bg-teal-500 border-teal-500 text-white shadow-sm">✈️ 항공</button>
                             <button type="button" data-type="transport" class="py-2 text-xs rounded-xl border-2 font-bold transition-all bg-white border-slate-100 text-slate-500 hover:bg-slate-50">🚗 이동</button>
                             <button type="button" data-type="food" class="py-2 text-xs rounded-xl border-2 font-bold transition-all bg-white border-slate-100 text-slate-500 hover:bg-slate-50">🍴 식사</button>
-                            <button type="button" data-type="activity" class="py-2 text-xs rounded-xl border-2 font-bold transition-all bg-teal-500 border-teal-500 text-white shadow-sm">🏖️ 일정</button>
+                            <button type="button" data-type="activity" class="py-2 text-xs rounded-xl border-2 font-bold transition-all bg-white border-slate-100 text-slate-500 hover:bg-slate-50">🏖️ 일정</button>
                         </div>
                     </div>
 
@@ -148,7 +154,7 @@
             <section id="checklist-section" class="lg:col-span-5 space-y-6 hidden lg:block print-break">
                 <div class="flex items-center justify-between pb-2 border-b border-slate-200">
                     <h2 class="text-lg font-bold text-slate-800 flex items-center gap-2">
-                        <i data-lucide="check-circle-2" class="text-teal-600"></i> 필수 체크리스트
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check-circle-2" aria-hidden="true" class="lucide lucide-check-circle-2 text-teal-600"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg> 필수 체크리스트
                     </h2>
                     <span class="text-xs text-slate-400 no-print">준비물 확인용</span>
                 </div>
@@ -157,7 +163,7 @@
                 <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-100">
                     <div class="flex justify-between items-baseline mb-2">
                         <span class="text-sm font-bold text-slate-600">준비 완료 달성률</span>
-                        <span class="text-lg font-black text-teal-600" id="progress-text">0 / 0개 (0%)</span>
+                        <span class="text-lg font-black text-teal-600" id="progress-text">0 / 3개 (0%)</span>
                     </div>
                     <div class="w-full bg-slate-100 rounded-full h-3 overflow-hidden">
                         <div id="progress-bar" class="bg-teal-500 h-full rounded-full transition-all duration-500 ease-out" style="width: 0%"></div>
@@ -165,15 +171,13 @@
                 </div>
 
                 <!-- Checklist Area -->
-                <div id="checklist-container" class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden divide-y divide-slate-50">
-                    <!-- Dynamic checklist items -->
-                </div>
+                <div id="checklist-container" class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden divide-y divide-slate-50"></div>
 
                 <!-- Add Checklist Item Form -->
                 <form id="checklist-form" class="relative no-print">
-                    <input type="text" id="checklist-new-input" placeholder="챙겨야 할 새로운 준비물 추가..." class="w-full bg-white border-2 border-slate-100 rounded-2xl pl-4 pr-12 py-3.5 text-sm font-semibold shadow-sm focus:outline-none focus:ring-2 focus:ring-teal-500" required>
+                    <input type="text" id="checklist-new-input" placeholder="챙겨야 할 새로운 준비물 추가..." class="w-full bg-white border-2 border-slate-100 rounded-2xl pl-4 pr-12 py-3.5 text-sm font-semibold shadow-sm focus:outline-none focus:ring-2 focus:ring-teal-500" required="">
                     <button type="submit" class="absolute right-2 top-2 bottom-2 aspect-square bg-teal-600 text-white rounded-xl flex items-center justify-center hover:bg-teal-700 transition-all shadow-sm">
-                        <i data-lucide="plus" class="w-5 h-5"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="plus" aria-hidden="true" class="lucide lucide-plus w-5 h-5"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>
                     </button>
                 </form>
             </section>
@@ -184,12 +188,12 @@
         <section class="mt-8 space-y-4 print-break">
             <div class="flex items-center justify-between pb-2 border-b border-slate-200">
                 <h2 class="text-lg font-bold text-slate-800 flex items-center gap-2">
-                    <i data-lucide="map" class="text-teal-600"></i> 🗺️ 발리 주요 명소 동선 지도
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="map" aria-hidden="true" class="lucide lucide-map text-teal-600"><path d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z"></path><path d="M15 5.764v15"></path><path d="M9 3.236v15"></path></svg> 🗺️ 발리 주요 명소 동선 지도
                 </h2>
                 <span class="text-xs text-slate-400">일정표에서 '지도 위치'를 누르면 지도가 해당 지역으로 줌인 확대됩니다!</span>
             </div>
             <div class="bg-white rounded-3xl p-4 shadow-sm border border-slate-100 overflow-hidden">
-                <div id="map" class="w-full h-[500px] lg:h-[550px] rounded-2xl z-10"></div>
+                <div id="map" class="w-full h-[500px] lg:h-[550px] rounded-2xl z-10" tabindex="0" style="position: relative;"></div>
                 <div class="mt-4 flex flex-wrap gap-3 justify-center text-xs text-slate-500 font-bold">
                     <button onclick="zoomToSpot('airport')" class="flex items-center gap-1 bg-slate-100 hover:bg-teal-50 hover:text-teal-700 px-2.5 py-1.5 rounded-lg transition-colors"><span class="w-2.5 h-2.5 rounded-full bg-teal-600 inline-block"></span> 덴파사르 공항</button>
                     <button onclick="zoomToSpot('seminyak')" class="flex items-center gap-1 bg-slate-100 hover:bg-teal-50 hover:text-teal-700 px-2.5 py-1.5 rounded-lg transition-colors"><span class="w-2.5 h-2.5 rounded-full bg-teal-600 inline-block"></span> 스미냑 숙소/비치</button>
@@ -201,51 +205,313 @@
         </section>
     </main>
 
+    <!-- 📥 안전 다운로드 & 백업 코드 복사 모달 (no-print) -->
+    <div id="download-modal" class="fixed inset-0 bg-slate-900/60 z-50 flex items-center justify-center p-4 backdrop-blur-sm hidden no-print">
+        <div class="bg-white rounded-3xl p-6 max-w-lg w-full shadow-2xl border border-slate-100 max-h-[85vh] flex flex-col">
+            <div class="flex items-center gap-2 mb-2 text-teal-800">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="download-cloud" aria-hidden="true" class="lucide lucide-download-cloud w-6 h-6 text-teal-600"><path d="M12 13v8l-4-4"></path><path d="m12 21 4-4"></path><path d="M4.393 15.269A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.436 8.284"></path></svg>
+                <h3 class="text-lg font-black">일행 공유용 파일 백업 가이드</h3>
+            </div>
+            <p class="text-xs text-slate-500 mb-4 leading-relaxed">
+                다운로드 차단 샌드박스로 인해 자동 저장이 실행되지 않았나요? 염려하지 마세요! 아래 상자 안의 전체 코드를 복사하여 내 컴퓨터에 <code class="bg-slate-100 text-teal-700 px-1 py-0.5 rounded font-bold font-mono">index.html</code> 파일로 저장하시면 언제든 정상 실행됩니다.
+            </p>
+            
+            <div class="flex-1 min-h-[150px] mb-4 relative">
+                <textarea id="download-code-area" readonly="" class="w-full h-full min-h-[150px] bg-slate-50 border border-slate-200 rounded-xl p-3 text-[10px] font-mono text-slate-600 focus:outline-none"></textarea>
+            </div>
+
+            <div class="flex gap-2 justify-end">
+                <button type="button" id="copy-code-btn" class="flex-1 py-3 text-sm font-bold text-white bg-teal-600 hover:bg-teal-700 rounded-xl transition-all flex items-center justify-center gap-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="copy" aria-hidden="true" class="lucide lucide-copy w-4 h-4"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg> 코드 복사하기
+                </button>
+                <button type="button" id="close-download-modal-btn" class="px-5 py-3 text-sm font-bold text-slate-600 bg-slate-100 hover:bg-slate-200 rounded-xl transition-all">
+                    닫기
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 🚨 커스텀 UI 확인/경고창 모달 대체 시스템 (No alert() or confirm()) -->
+    <div id="alert-modal" class="fixed inset-0 bg-slate-900/60 z-50 flex items-center justify-center p-4 backdrop-blur-sm hidden no-print">
+        <div class="bg-white rounded-3xl p-6 max-w-sm w-full shadow-2xl border border-slate-100 animate-in zoom-in-95 duration-200">
+            <div class="flex items-center gap-2.5 mb-3 text-slate-800">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="alert-circle" aria-hidden="true" class="lucide lucide-alert-circle w-6 h-6 text-teal-600"><circle cx="12" cy="12" r="10"></circle><line x1="12" x2="12" y1="8" y2="12"></line><line x1="12" x2="12.01" y1="16" y2="16"></line></svg>
+                <h4 id="alert-title" class="font-extrabold text-base">알림</h4>
+            </div>
+            <p id="alert-message" class="text-sm text-slate-600 mb-5 leading-relaxed">경고 메시지 내용</p>
+            <button type="button" id="close-alert-btn" class="w-full py-3 bg-teal-600 hover:bg-teal-700 text-white font-bold rounded-xl text-sm transition-all">
+                확인
+            </button>
+        </div>
+    </div>
+
+    <div id="confirm-modal" class="fixed inset-0 bg-slate-900/60 z-50 flex items-center justify-center p-4 backdrop-blur-sm no-print hidden">
+        <div class="bg-white rounded-3xl p-6 max-w-sm w-full shadow-2xl border border-slate-100 animate-in zoom-in-95 duration-200">
+            <div class="flex items-center gap-2.5 mb-3 text-slate-800">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="help-circle" aria-hidden="true" class="lucide lucide-help-circle w-6 h-6 text-amber-500"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg>
+                <h4 id="confirm-title" class="font-extrabold text-base">💾 오프라인 공유용 파일 받기</h4>
+            </div>
+            <p id="confirm-message" class="text-sm text-slate-600 mb-5 leading-relaxed">현재까지 작성하고 변경한 일정 및 준비물 데이터가 영구 주입된 새로운 독립 실행형 index.html 파일을 다운로드하시겠습니까?</p>
+            <div class="flex gap-2">
+                <button type="button" id="confirm-no-btn" class="flex-1 py-3 bg-slate-100 hover:bg-slate-200 text-slate-600 font-bold rounded-xl text-sm transition-all">
+                    취소
+                </button>
+                <button type="button" id="confirm-yes-btn" class="flex-1 py-3 bg-teal-600 hover:bg-teal-700 text-white font-bold rounded-xl text-sm transition-all">
+                    실행
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 데이터 보존 블록 (정적 초기 로드용 고유 데이터셋) -->
+    <script id="file-metadata-json" type="application/json">
+{
+  "updatedAt": "2026-07-05T06:32:19.790Z"
+}
+</script>
+    <script id="default-schedules-json" type="application/json">
+[
+  {
+    "id": "s1",
+    "date": "2026-07-25",
+    "time": "08:00",
+    "content": "인천공항 출발 ✈️",
+    "type": "flight"
+  },
+  {
+    "id": "s_1783231915564",
+    "date": "2026-07-25",
+    "time": "10:50",
+    "content": "홍콩도착",
+    "type": "flight"
+  },
+  {
+    "id": "s_1783231965032",
+    "date": "2026-07-25",
+    "time": "12:35",
+    "content": "홍콩 출발",
+    "type": "flight"
+  },
+  {
+    "id": "s4",
+    "date": "2026-07-25",
+    "time": "17:40",
+    "content": "발리 덴파사 공항 도착 🌴",
+    "type": "flight"
+  },
+  {
+    "id": "s_1783232110860",
+    "date": "2026-07-25",
+    "time": "18:30",
+    "content": "공항 픽업 서비스(숙소 이동 1시간 소요)",
+    "type": "transport"
+  },
+  {
+    "id": "s6",
+    "date": "2026-07-25",
+    "time": "19:30",
+    "content": "스미냑 숙소 도착 후  주변  탐방 및 야식",
+    "type": "activity"
+  },
+  {
+    "id": "s_1783232226753",
+    "date": "2026-07-26",
+    "time": "08:00",
+    "content": "주변에서 아침식사(장소 확인 필요)",
+    "type": "food"
+  },
+  {
+    "id": "s9",
+    "date": "2026-07-26",
+    "time": "10:00",
+    "content": "스미냑 비치 서핑 강습 🏄‍♂️",
+    "type": "activity"
+  },
+  {
+    "id": "s_1783232282184",
+    "date": "2026-07-26",
+    "time": "12:00",
+    "content": "점심식사",
+    "type": "food"
+  },
+  {
+    "id": "s15",
+    "date": "2026-07-27",
+    "time": "10:00",
+    "content": "워터봄 발리 워터파크 🌊",
+    "type": "activity"
+  },
+  {
+    "id": "s_1783232411035",
+    "date": "2026-07-28",
+    "time": "08:00",
+    "content": "아침식사",
+    "type": "food"
+  },
+  {
+    "id": "s_1783232385924",
+    "date": "2026-07-28",
+    "time": "09:00",
+    "content": "우붓 이동 (택시 10시간 렌트) - 우붓 이동 (2시반 가량)",
+    "type": "transport"
+  },
+  {
+    "id": "s17",
+    "date": "2026-07-28",
+    "time": "12:00",
+    "content": "점심식사",
+    "type": "food"
+  },
+  {
+    "id": "s_1783232502093",
+    "date": "2026-07-28",
+    "time": "13:00",
+    "content": "발리 스윙 (피치븐스윙)",
+    "type": "activity"
+  },
+  {
+    "id": "s_1783232553784",
+    "date": "2026-07-28",
+    "time": "15:00",
+    "content": "우붓 택시 투어(미정 , 래프링 , 튜빙 , 폭포 ....)",
+    "type": "activity"
+  },
+  {
+    "id": "s19",
+    "date": "2026-07-30",
+    "time": "03:00",
+    "content": "바투르산 일출 지프 투어 🌋 (오전 3시 출발 ~ 오전 11시도착)",
+    "type": "activity"
+  },
+  {
+    "id": "s_1783232666394",
+    "date": "2026-07-30",
+    "time": "14:00",
+    "content": "우붓 시내에서 점심 식사 후 시내 투어(우붓 왕국, 몽키포레스트, 물의 사원)",
+    "type": "activity"
+  },
+  {
+    "id": "s_1783232718364",
+    "date": "2026-07-30",
+    "time": "16:00",
+    "content": "우붓 마사지(누사테라피)",
+    "type": "activity"
+  },
+  {
+    "id": "s_1783232769240",
+    "date": "2026-07-31",
+    "time": "16:15",
+    "content": "발리->홍콩 출발",
+    "type": "flight"
+  },
+  {
+    "id": "s_1783232806607",
+    "date": "2026-07-31",
+    "time": "21:25",
+    "content": "홍콩 공항 도착 - 택시 픽업 서비스",
+    "type": "flight"
+  },
+  {
+    "id": "s_1783232910760",
+    "date": "2026-07-31",
+    "time": "22:00",
+    "content": "숙소 도착 후 야식 및 하버 야경 구경",
+    "type": "activity"
+  },
+  {
+    "id": "s_1783232971114",
+    "date": "2026-08-01",
+    "time": "09:00",
+    "content": "홍콩역 : AEL 공항철도 이용하여  CHEK-IN 및 짐 보내기",
+    "type": "activity"
+  },
+  {
+    "id": "s_1783233057222",
+    "date": "2026-08-01",
+    "time": "10:00",
+    "content": "홍콩 시내 투어 ( 미드레벨 에스컬레이터 , 베이크하우스 , 페리이동 후 침사추이 관광)",
+    "type": "activity"
+  },
+  {
+    "id": "s_1783231418196",
+    "date": "2026-08-01",
+    "time": "19:45",
+    "content": "홍콩 -> 인천 국제선 출발 ✈️",
+    "type": "flight"
+  },
+  {
+    "id": "s_1783230188215",
+    "date": "2026-08-02",
+    "time": "00:25",
+    "content": "귀국",
+    "type": "flight"
+  }
+]
+</script>
+    <script id="default-checklists-json" type="application/json">
+[
+  {
+    "id": "c1",
+    "content": "여권 실물 (만료일 6개월 이상)",
+    "isDone": false
+  },
+  {
+    "id": "c4",
+    "content": "트래블월렛 환전 및 카드 준비",
+    "isDone": false
+  },
+  {
+    "id": "c7",
+    "content": "상비약 (지사제, 모기약)",
+    "isDone": false
+  }
+]
+</script>
+
     <!-- Leaflet.js JavaScript for Map -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script>
-        // --- Default Seeding Data (PDF 기반) ---
-        const defaultSchedules = [
-            { id: "s1", date: '2026-07-25', time: '08:00', content: '인천공항 출발 ✈️', type: 'flight' },
-            { id: "s2", date: '2026-07-25', time: '10:50', content: '홍콩 도착 및 환승 대기', type: 'flight' },
-            { id: "s3", date: '2026-07-25', time: '12:35', content: '홍콩 출발 ✈️', type: 'flight' },
-            { id: "s4", date: '2026-07-25', time: '17:40', content: '발리 응우라라이 공항 도착(덴파사) 🌴', type: 'flight' },
-            { id: "s5", date: '2026-07-25', time: '19:00', content: '공항 픽업 차량 미팅', type: 'transport' },
-            { id: "s6", date: '2026-07-25', time: '20:00', content: '스미냑 숙소 이동 (약 50분 소요)', type: 'transport' },
-            { id: "s7", date: '2026-07-25', time: '', content: '숙소 근처 간단한 저녁식사 (장소 확인)', type: 'food' },
-            { id: "s8", date: '2026-07-26', time: '', content: '아침식사 (장소 확인)', type: 'food' },
-            { id: "s9", date: '2026-07-26', time: '', content: '꾸따/더블식스 비치에서 서핑 입문 강습 🏄‍♂️', type: 'activity' },
-            { id: "s10", date: '2026-07-26', time: '', content: '점심 식사', type: 'food' },
-            { id: "s11", date: '2026-07-26', time: '', content: '스미냑 스파 마사지 받으며 휴식 💆‍♀️', type: 'activity' },
-            { id: "s12", date: '2026-07-26', time: '', content: '스미냑 스퀘어 쇼핑', type: 'activity' },
-            { id: "s13", date: '2026-07-26', time: '', content: '저녁 식사', type: 'food' },
-            { id: "s14", date: '2026-07-26', time: '', content: '포테이토 헤드 비치클럽 공연 방문 🍹', type: 'activity' },
-            { id: "s15", date: '2026-07-27', time: '', content: '워터봄 발리 워터파크 종일 즐기기 🌊', type: 'activity' },
-            { id: "s16", date: '2026-07-28', time: '10:00', content: '전용 차량 트랜스퍼 호텔 픽업', type: 'transport' },
-            { id: "s17", date: '2026-07-28', time: '', content: '10시간 자유 차량 투어 (스미냑 -> 우붓으로 이동)', type: 'activity' },
-            { id: "s18", date: '2026-07-29', time: '', content: '누사테라피 스파 방문 (1시간 240k / 90분 340k)', type: 'activity' },
-            { id: "s19", date: '2026-07-30', time: '03:00', content: '바투르산 일출 지프 투어 출발 🌋', type: 'activity' },
-            { id: "s20", date: '2026-07-31', time: '16:15', content: '발리 출발 ✈️', type: 'flight' },
-            { id: "s21", date: '2026-07-31', time: '21:25', content: '홍콩 도착', type: 'flight' },
-            { id: "s22", date: '2026-08-01', time: '', content: '홍콩 자유 일정 🇭🇰', type: 'activity' },
-            { id: "s23", date: '2026-08-02', time: '19:45', content: '홍콩 -> 인천 국제선 출발 ✈️', type: 'flight' },
-            { id: "s24", date: '2026-08-03', time: '00:25', content: '한국 인천공항 도착 및 귀가 🇰🇷', type: 'flight' }
+        // --- 7박 9일 발리 마스터 플랜 백업용 전역 객체 선언 (에러 없는 무손실 동기화용) ---
+        const MASTER_SCHEDULES_BACKUP = [
+            { "id": "s1", "date": "2026-07-25", "time": "08:00", "content": "인천공항 출발 ✈️", "type": "flight" },
+            { "id": "s2", "date": "2026-07-25", "time": "10:50", "content": "홍콩 도착 및 환승 대기", "type": "flight" },
+            { "id": "s3", "date": "2026-07-25", "time": "12:35", "content": "홍콩 출발 ✈️", "type": "flight" },
+            { "id": "s4", "date": "2026-07-25", "time": "17:40", "content": "발리 응우라라이 공항 도착(덴파사) 🌴", "type": "flight" },
+            { "id": "s5", "date": "2026-07-25", "time": "19:00", "content": "공항 픽업 차량 미팅", "type": "transport" },
+            { "id": "s6", "date": "2026-07-25", "time": "20:00", "content": "스미냑 숙소 이동 (약 50분 소요)", "type": "transport" },
+            { "id": "s7", "date": "2026-07-25", "time": "", "content": "숙소 근처 간단한 저녁식사 (장소 확인)", "type": "food" },
+            { "id": "s8", "date": "2026-07-26", "time": "", "content": "아침식사 (장소 확인)", "type": "food" },
+            { "id": "s9", "date": "2026-07-26", "time": "", "content": "꾸따/더블식스 비치에서 서핑 입문 강습 🏄‍♂️", "type": "activity" },
+            { "id": "s10", "date": "2026-07-26", "time": "", "content": "점심 식사", "type": "food" },
+            { "id": "s11", "date": "2026-07-26", "time": "", "content": "스미냑 스파 마사지 받으며 휴식 💆‍♀️", "type": "activity" },
+            { "id": "s12", "date": "2026-07-26", "time": "", "content": "스미냑 스퀘어 쇼핑", "type": "activity" },
+            { "id": "s13", "date": "2026-07-26", "time": "", "content": "저녁 식사", "type": "food" },
+            { "id": "s14", "date": "2026-07-26", "time": "", "content": "포테이토 헤드 비치클럽 공연 방문 🍹", "type": "activity" },
+            { "id": "s15", "date": "2026-07-27", "time": "", "content": "워터봄 발리 워터파크 종일 즐기기 🌊", "type": "activity" },
+            { "id": "s16", "date": "2026-07-28", "time": "10:00", "content": "전용 차량 트랜스퍼 호텔 픽업", "type": "transport" },
+            { "id": "s17", "date": "2026-07-28", "time": "", "content": "10시간 자유 차량 투어 (스미냑 -> 우붓으로 이동)", "type": "activity" },
+            { "id": "s18", "date": "2026-07-29", "time": "", "content": "누사테라피 스파 방문 (1시간 240k / 90분 340k)", "type": "activity" },
+            { "id": "s19", "date": "2026-07-30", "time": "03:00", "content": "바투르산 일출 지프 투어 출발 🌋", "type": "activity" },
+            { "id": "s20", "date": "2026-07-31", "time": "16:15", "content": "발리 출발 ✈️", "type": "flight" },
+            { "id": "s21", "date": "2026-07-31", "time": "21:25", "content": "홍콩 도착", "type": "flight" },
+            { "id": "s22", "date": "2026-08-01", "time": "", "content": "홍콩 자유 일정 🇭🇰", "type": "activity" },
+            { "id": "s23", "date": "2026-08-02", "time": "19:45", "content": "홍콩 -> 인천 국제선 출발 ✈️", "type": "flight" },
+            { "id": "s24", "date": "2026-08-03", "time": "00:25", "content": "한국 인천공항 도착 및 귀가 🇰🇷", "type": "flight" }
         ];
 
-        const defaultChecklists = [
-            { id: "c1", content: '여권 실물 (만료일 최소 6개월 이상 필수!)', isDone: false },
-            { id: "c2", content: '항공권 E-Ticket 및 바우처 준비', isDone: false },
-            { id: "c3", content: '숙소 예약 정보 및 바우처 모바일 저장', isDone: false },
-            { id: "c4", content: '해외 결제 가능 카드 & 트래블월렛 환전', isDone: false },
-            { id: "c5", content: '수영복, 비치타올 및 아쿠아슈즈 챙기기', isDone: false },
-            { id: "c6", content: '자외선 차단 선크림 및 선글라스', isDone: false },
-            { id: "c7", content: '비상 상비약 (지사제, 소화제, 모기약)', isDone: false },
-            { id: "c8", content: '스마트폰 유심(eSIM) 사전 구매', isDone: false },
-            { id: "c9", content: '인도네시아 입국용 e-VOA 사전 신청 완료', isDone: false },
-            { id: "c10", content: '전자세관신고서(ECD) 작성해두기', isDone: false }
+        const MASTER_CHECKLISTS_BACKUP = [
+            { "id": "c1", "content": "여권 실물 (만료일 최소 6개월 이상 필수!)", "isDone": false },
+            { "id": "c2", "content": "항공권 E-Ticket 및 바우처 준비", "isDone": false },
+            { "id": "c3", "content": "숙소 예약 정보 및 바우처 모바일 저장", "isDone": false },
+            { "id": "c4", "content": "해외 결제 가능 카드 & 트래블월렛 환전", "isDone": false },
+            { "id": "c5", "content": "수영복, 비치타올 및 아쿠아슈즈 챙기기", "isDone": false },
+            { "id": "c6", "content": "자외선 차단 선크림 및 선글라스", "isDone": false },
+            { "id": "c7", "content": "비상 상비약 (지사제, 소화제, 모기약)", "isDone": false },
+            { "id": "c8", "content": "스마트폰 유심(eSIM) 사전 구매", "isDone": false },
+            { "id": "c9", "content": "인도네시아 입국용 e-VOA 사전 신청 완료", "isDone": false },
+            { "id": "c10", "content": "전자세관신고서(ECD) 작성해두기", "isDone": false }
         ];
 
-        // --- App State ---
         let schedules = [];
         let checklists = [];
         let currentSelectedType = 'activity';
@@ -253,26 +519,83 @@
         let map; // Leaflet map object
         let markersGroup = {}; // To reference markers individually
 
+        // Custom Confirm system
+        let confirmAction = null;
+        function showConfirm(title, message, callback) {
+            document.getElementById('confirm-title').innerText = title;
+            document.getElementById('confirm-message').innerText = message;
+            document.getElementById('confirm-modal').classList.remove('hidden');
+            confirmAction = callback;
+        }
+
+        document.getElementById('confirm-yes-btn').onclick = () => {
+            if (confirmAction) confirmAction();
+            document.getElementById('confirm-modal').classList.add('hidden');
+        };
+        document.getElementById('confirm-no-btn').onclick = () => {
+            document.getElementById('confirm-modal').classList.add('hidden');
+        };
+
+        // Custom Alert system
+        function showAlert(title, message) {
+            document.getElementById('alert-title').innerText = title;
+            document.getElementById('alert-message').innerText = message;
+            document.getElementById('alert-modal').classList.remove('hidden');
+        }
+        document.getElementById('close-alert-btn').onclick = () => {
+            document.getElementById('alert-modal').classList.add('hidden');
+        };
+
         // --- LocalStorage Logic ---
         function loadData() {
-            const localSchedules = localStorage.getItem('bali_local_schedules');
-            const localChecklists = localStorage.getItem('bali_local_checklists');
+            try {
+                const metaText = document.getElementById('file-metadata-json').textContent;
+                const fileMeta = JSON.parse(metaText);
+                const localMetaText = localStorage.getItem('bali_local_metadata');
+                const localMeta = localMetaText ? JSON.parse(localMetaText) : { updatedAt: "" };
 
-            schedules = localSchedules ? JSON.parse(localSchedules) : [...defaultSchedules];
-            checklists = localChecklists ? JSON.parse(localChecklists) : [...defaultChecklists];
-            
-            // 최초 실행 시 로컬 스토리지 데이터 동기화 보장
-            if (!localSchedules) saveSchedules();
-            if (!localChecklists) saveChecklists();
+                const defaultSchedules = JSON.parse(document.getElementById('default-schedules-json').textContent);
+                const defaultChecklists = JSON.parse(document.getElementById('default-checklists-json').textContent);
+
+                // 파일 내부에 삽입된 업데이트 시각이 로컬 스토리지 데이터보다 미래일 경우
+                // 혹은 기존 로컬 스토리지에 캐시된 데이터 배열이 완전히 비어있는([] 인) 경우 강제 복구 트리거
+                const localSchedulesRaw = localStorage.getItem('bali_local_schedules');
+                const isLocalSchedulesEmpty = !localSchedulesRaw || JSON.parse(localSchedulesRaw).length === 0;
+
+                if (!localMetaText || fileMeta.updatedAt.localeCompare(localMeta.updatedAt) === 1 || isLocalSchedulesEmpty) {
+                    schedules = defaultSchedules;
+                    checklists = defaultChecklists;
+                    saveSchedules();
+                    saveChecklists();
+                    localStorage.setItem('bali_local_metadata', JSON.stringify(fileMeta));
+                } else {
+                    const localSchedules = localStorage.getItem('bali_local_schedules');
+                    const localChecklists = localStorage.getItem('bali_local_checklists');
+                    schedules = localSchedules ? JSON.parse(localSchedules) : defaultSchedules;
+                    checklists = localChecklists ? JSON.parse(localChecklists) : defaultChecklists;
+                }
+            } catch (err) {
+                console.error("데이터 로딩 실패:", err);
+                // 에러 복구용 안전 지대 마련
+                schedules = JSON.parse(JSON.stringify(MASTER_SCHEDULES_BACKUP));
+                checklists = JSON.parse(JSON.stringify(MASTER_CHECKLISTS_BACKUP));
+            }
         }
 
         // --- Save Data ---
         function saveSchedules() {
             localStorage.setItem('bali_local_schedules', JSON.stringify(schedules));
+            updateLocalMetadata();
         }
 
         function saveChecklists() {
             localStorage.setItem('bali_local_checklists', JSON.stringify(checklists));
+            updateLocalMetadata();
+        }
+
+        function updateLocalMetadata() {
+            const now = new Date().toISOString();
+            localStorage.setItem('bali_local_metadata', JSON.stringify({ updatedAt: now }));
         }
 
         // --- UI Utils ---
@@ -283,6 +606,7 @@
         }
 
         function getRelativeDay(dateString) {
+            // 부등호 < 를 localeCompare === -1 로 완벽 우회하여 HTML 이스케이프 버그 방지
             const isBeforeStart = dateString.localeCompare('2026-07-25') === -1;
             if (isBeforeStart) {
                 return '';
@@ -408,7 +732,9 @@
                                 </div>
                                 <p class="text-sm font-semibold text-slate-800 leading-relaxed pr-24">${item.content}</p>
 
-                                ${mapBtnHTML}
+                                <div class="flex flex-wrap items-center gap-2 mt-1">
+                                    ${mapBtnHTML}
+                                </div>
 
                                 <div class="absolute right-3 top-3 flex gap-1 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity bg-white p-1 rounded-lg border sm:border-0 sm:bg-transparent">
                                     <button class="no-print p-1.5 text-slate-400 hover:text-teal-600 hover:bg-teal-50 rounded-lg edit-schedule-btn" data-id="${item.id}">
@@ -444,11 +770,11 @@
             document.querySelectorAll('.delete-schedule-btn').forEach(btn => {
                 btn.onclick = () => {
                     const id = btn.getAttribute('data-id');
-                    if (confirm('이 일정을 삭제하시겠습니까?')) {
+                    showConfirm("💡 일정 삭제 확인", "이 일정을 보드에서 완전히 삭제하시겠습니까?", () => {
                         schedules = schedules.filter(s => s.id !== id);
                         saveSchedules();
                         renderSchedules();
-                    }
+                    });
                 };
             });
         }
@@ -521,11 +847,11 @@
             document.querySelectorAll('.delete-checklist-btn').forEach(btn => {
                 btn.onclick = () => {
                     const id = btn.getAttribute('data-id');
-                    if (confirm('이 준비물을 삭제하시겠습니까?')) {
+                    showConfirm("💡 준비물 삭제 확인", "이 준비물 항목을 체크리스트에서 안전하게 제외하시겠습니까?", () => {
                         checklists = checklists.filter(c => c.id !== id);
                         saveChecklists();
                         renderChecklist();
-                    }
+                    });
                 };
             });
         }
@@ -650,6 +976,152 @@
             }
         };
 
+        // --- 📥 백업용 팝업 모달 함수 제어 ---
+        function openDownloadModal(codeContent) {
+            const modal = document.getElementById('download-modal');
+            const textarea = document.getElementById('download-code-area');
+            textarea.value = codeContent;
+            modal.classList.remove('hidden');
+        }
+
+        function closeDownloadModal() {
+            document.getElementById('download-modal').classList.add('hidden');
+        }
+
+        // --- 📥 HTML 자체 수정 및 다운로드 핵심 비즈니스 로직 ---
+        function downloadUpdatedHTML() {
+            closeScheduleForm();
+
+            // 백그라운드에서 임시로 전체 페이지 DOM을 안전하게 복제 (DOM Cloning)
+            const docClone = document.cloneNode(true);
+            
+            // 복제본의 동적 양식, 모달 및 불필요한 상태 정리
+            const formInClone = docClone.getElementById('schedule-form');
+            if (formInClone) formInClone.classList.add('hidden');
+            
+            const addBtnInClone = docClone.getElementById('add-schedule-btn');
+            if (addBtnInClone) addBtnInClone.classList.remove('hidden');
+            
+            const dlModalInClone = docClone.getElementById('download-modal');
+            if (dlModalInClone) dlModalInClone.classList.add('hidden');
+
+            // ✅ 핵심 버그 수정: 확인(Confirm) 및 경고(Alert) 창이 열린 상태로 저장되지 않도록 초기화
+            const confirmModalInClone = docClone.getElementById('confirm-modal');
+            if (confirmModalInClone) confirmModalInClone.classList.add('hidden');
+
+            const alertModalInClone = docClone.getElementById('alert-modal');
+            if (alertModalInClone) alertModalInClone.classList.add('hidden');
+
+            // 동적 컨테이너 비우기 (어차피 파일 오픈 시 자바스크립트가 JSON 데이터를 읽고 새로 그림)
+            const schedContInClone = docClone.getElementById('schedule-container');
+            if (schedContInClone) schedContInClone.innerHTML = '';
+            
+            const checkContInClone = docClone.getElementById('checklist-container');
+            if (checkContInClone) checkContInClone.innerHTML = '';
+
+            // 지도 영역 초기 상태 보존
+            const mapDivInClone = docClone.getElementById('map');
+            if (mapDivInClone) {
+                mapDivInClone.className = 'w-full h-[500px] lg:h-[550px] rounded-2xl z-10';
+                mapDivInClone.innerHTML = '';
+            }
+
+            // 수정 완료된 일정을 복제본 내부의 JSON 스크립트 블록에 정확하게 주입하여 빌드
+            const schedJsonInClone = docClone.getElementById('default-schedules-json');
+            if (schedJsonInClone) {
+                schedJsonInClone.textContent = '\n' + JSON.stringify(schedules, null, 2) + '\n';
+            }
+
+            const checkJsonInClone = docClone.getElementById('default-checklists-json');
+            if (checkJsonInClone) {
+                checkJsonInClone.textContent = '\n' + JSON.stringify(checklists, null, 2) + '\n';
+            }
+
+            // 새로운 빌드 배포 시간을 기록하여 로컬스토리지 자동 오버라이드 유도
+            const metaJsonInClone = docClone.getElementById('file-metadata-json');
+            if (metaJsonInClone) {
+                metaJsonInClone.textContent = '\n' + JSON.stringify({ updatedAt: new Date().toISOString() }, null, 2) + '\n';
+            }
+
+            // 최종 완전한 HTML 문자열 추출
+            let updatedHtml = "<!DOCTYPE html>\n" + docClone.documentElement.outerHTML;
+
+            // 1. 브라우저 자동 다운로드 시도 ( target="_blank" 및 download 속성을 통해 안정성 향상 )
+            try {
+                const blob = new Blob([updatedHtml], { type: 'text/html;charset=utf-8' });
+                const downloadLink = document.createElement('a');
+                
+                const isIframe = window.self !== window.top;
+                if (isIframe) {
+                    openDownloadModal(updatedHtml);
+                } else {
+                    downloadLink.href = URL.createObjectURL(blob);
+                    downloadLink.download = 'bali_trip_planner.html';
+                    downloadLink.target = '_blank';
+                    downloadLink.rel = 'noopener';
+                    document.body.appendChild(downloadLink);
+                    downloadLink.click();
+                    document.body.removeChild(downloadLink);
+                    setTimeout(() => {
+                        URL.revokeObjectURL(downloadLink.href);
+                    }, 100);
+                }
+            } catch (e) {
+                console.warn("다운로드 차단 감지. 백업 수동 가이드를 오픈합니다.", e);
+                openDownloadModal(updatedHtml);
+            }
+
+            document.getElementById('download-code-area').value = updatedHtml;
+        }
+
+        // --- Event Handlers ---
+        document.getElementById('download-html-btn').onclick = () => {
+            showConfirm("💾 오프라인 공유용 파일 받기", "현재까지 작성하고 변경한 일정 및 준비물 데이터가 영구 주입된 새로운 독립 실행형 index.html 파일을 다운로드하시겠습니까?", () => {
+                downloadUpdatedHTML();
+            });
+        };
+
+        // 모달 제어 이벤트 바인딩
+        document.getElementById('close-download-modal-btn').onclick = closeDownloadModal;
+
+        // 원클릭 코드 복사 이벤트
+        document.getElementById('copy-code-btn').onclick = () => {
+            const textarea = document.getElementById('download-code-area');
+            textarea.select();
+            try {
+                // Clipboard fallback support
+                const successful = document.execCommand('copy');
+                if (successful) {
+                    const copyBtn = document.getElementById('copy-code-btn');
+                    const originalHTML = copyBtn.innerHTML;
+                    copyBtn.innerHTML = `<i data-lucide="check" class="w-4 h-4"></i> 소스 코드 복사 완료!`;
+                    lucide.createIcons();
+                    setTimeout(() => {
+                        copyBtn.innerHTML = originalHTML;
+                        lucide.createIcons();
+                    }, 2000);
+                } else {
+                    showAlert("복사 에러", "브라우저 보안에 의해 복사가 거부되었습니다. 마우스로 영역을 직접 지정하여 복사해 주세요.");
+                }
+            } catch (err) {
+                showAlert("복사 에러", "지원하지 않는 브라우저입니다. Ctrl+C를 눌러 복사해 주세요.");
+            }
+        };
+
+        // 기본 일정 수동 복구 트리거 연결
+        document.getElementById('restore-default-btn').onclick = () => {
+            showConfirm("🔄 기본 일정 복구", "수정하셨던 개별 일정을 덮어쓰고, 처음에 약속된 7박 9일 발리 마스터 플랜 일정표로 완전히 초기화하시겠습니까?", () => {
+                schedules = JSON.parse(JSON.stringify(MASTER_SCHEDULES_BACKUP));
+                checklists = JSON.parse(JSON.stringify(MASTER_CHECKLISTS_BACKUP));
+                saveSchedules();
+                saveChecklists();
+                renderSchedules();
+                renderChecklist();
+                initMap();
+                showAlert("✅ 복구 완료", "원래 설계하셨던 발리 일정표 및 체크리스트가 화면에 리로드되었습니다!");
+            });
+        };
+
         document.getElementById('schedule-form').onsubmit = (e) => {
             e.preventDefault();
             const id = document.getElementById('form-schedule-id').value;
@@ -734,5 +1206,5 @@
             initMap();
         };
     </script>
-</body>
-</html>
+
+</body></html>
